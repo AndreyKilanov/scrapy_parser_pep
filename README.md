@@ -30,5 +30,3 @@
 ```bash
     scrapy crawl pep
 ```
-
-![screenshot](C:\Users\Andy\Desktop\Screenshot_4.jpg)
