@@ -1,13 +1,14 @@
 BOT_NAME = 'pep_parse'
 
-SPIDER_MODULES = ['pep_parse.spiders']
 NEWSPIDER_MODULE = 'pep_parse.spiders'
+SPIDER_MODULES = [NEWSPIDER_MODULE]
 
 
 ROBOTSTXT_OBEY = True
 
+DOWNLOAD_DIR = 'results'
 FEEDS = {
-    'results/pep_%(time)s.csv': {
+    f'{DOWNLOAD_DIR}/pep_%(time)s.csv': {
         'format': 'csv',
         'fields': ['number', 'name', 'status'],
         'overwrite': True

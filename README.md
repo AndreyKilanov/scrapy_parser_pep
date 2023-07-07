@@ -30,3 +30,7 @@
 ```bash
     scrapy crawl pep
 ```
+
+_Author: Andrey Kilanov_
+
+_Stack: Scrapy_
