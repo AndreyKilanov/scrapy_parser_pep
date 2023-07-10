@@ -3,8 +3,9 @@ from csv import DictWriter
 from datetime import datetime as dt
 from pathlib import Path
 
-
-BASE_DIR = Path(__file__).parent.parent / 'results'
+DOWNLOAD_DIR = 'results'
+BASE_DIR = Path(__file__).parent.parent / DOWNLOAD_DIR
+BASE_DIR.mkdir(exist_ok=True)
 
 
 class PepParsePipeline:
@@ -20,7 +21,6 @@ class PepParsePipeline:
         self.dict['Total'] = sum(self.dict.values())
 
         date = dt.now().strftime('%Y-%m-%d_%H-%M-%S')
-        BASE_DIR.mkdir(exist_ok=True)
         filename = BASE_DIR / f'status_summary_{date}.csv'
 
         with open(filename, 'w', newline='') as csvfile:

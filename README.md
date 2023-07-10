@@ -12,25 +12,26 @@
 
 ***Клонировать репозиторий и перейти в него в командной строке:***
 
-* ```bash
+```bash
     git@github.com:AndyFebruary74/scrapy_parser_pep.git
-  ```
-* ```bash
+ ```
+```bash
     cd scrapy_parser_pep/
-  ```
+```
 ***Создать и активировать виртуальное окружение:***
-* ```bash
+```bash
     python -m venv venv
-  ```
+```
 ***Установить зависимости:***
-* ```bash
+```bash
     pip install -r requirements.txt
-  ```
+```
 ### ***Запустить парсер командой:***
 ```bash
     scrapy crawl pep
 ```
 
 _Author: Andrey Kilanov_
+ <img src="https://github.com/enricostara/telegram.link/blob/master/telegram.link.png" width="40"/>  https://t.me/AndyFebruary 
 
 _Stack: Scrapy_
