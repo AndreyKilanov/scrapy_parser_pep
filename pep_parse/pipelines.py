@@ -2,8 +2,9 @@ from collections import defaultdict
 from csv import DictWriter
 from datetime import datetime as dt
 from pathlib import Path
+from settings import DOWNLOAD_DIR
 
-DOWNLOAD_DIR = 'results'
+
 BASE_DIR = Path(__file__).parent.parent / DOWNLOAD_DIR
 BASE_DIR.mkdir(exist_ok=True)
 
