@@ -32,8 +32,7 @@
 ```
 
 _Author: Andrey Kilanov_
-
- <img src="https://github.com/enricostara/telegram.link/blob/master/telegram.link.png" width="20" alt=""/>
+ <img src="https://github.com/enricostara/telegram.link/blob/master/telegram.link.png" width="20"/>
 [telegram](https://t.me/AndyFebruary)
 
 _Stack: Python 3.10, Scrapy_
