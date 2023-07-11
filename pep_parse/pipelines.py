@@ -1,15 +1,17 @@
+from _csv import QUOTE_MINIMAL
 from collections import defaultdict
-from csv import DictWriter
+from csv import writer, excel
 from datetime import datetime as dt
 from pathlib import Path
-from settings import DOWNLOAD_DIR
 
+from pep_parse.settings import DOWNLOAD_DIR
 
 BASE_DIR = Path(__file__).parent.parent / DOWNLOAD_DIR
-BASE_DIR.mkdir(exist_ok=True)
 
 
 class PepParsePipeline:
+    def __init__(self):
+        BASE_DIR.mkdir(exist_ok=True)
 
     def open_spider(self, spider):
         self.dict = defaultdict(int)
@@ -25,12 +27,6 @@ class PepParsePipeline:
         filename = BASE_DIR / f'status_summary_{date}.csv'
 
         with open(filename, 'w', newline='') as csvfile:
-            status, count = 'Status', 'Count'
-            writer = DictWriter(csvfile, fieldnames=[status, count])
-            writer.writeheader()
-
-            dict_status = []
-            for key, value in self.dict.items():
-                dict_status.append({status: key, count: value})
-
-            writer.writerows(dict_status)
+            writer(csvfile, dialect=excel, quoting=QUOTE_MINIMAL).writerows(
+                (('Status', 'Count'), *self.dict.items())
+            )
