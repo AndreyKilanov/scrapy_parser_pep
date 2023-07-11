@@ -1,4 +1,3 @@
-from _csv import QUOTE_MINIMAL
 from collections import defaultdict
 from csv import writer, excel
 from datetime import datetime as dt
@@ -27,6 +26,6 @@ class PepParsePipeline:
         filename = BASE_DIR / f'status_summary_{date}.csv'
 
         with open(filename, 'w', newline='') as csvfile:
-            writer(csvfile, dialect=excel, quoting=QUOTE_MINIMAL).writerows(
+            writer(csvfile, dialect=excel).writerows(
                 (('Status', 'Count'), *self.dict.items())
             )
