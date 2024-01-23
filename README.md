@@ -13,7 +13,7 @@
 ***Клонировать репозиторий и перейти в него в командной строке:***
 
 ```bash
-    git@github.com:AndyFebruary74/scrapy_parser_pep.git
+    git@github.com:AndreyKilanov/scrapy_parser_pep.git
  ```
 ```bash
     cd scrapy_parser_pep/
